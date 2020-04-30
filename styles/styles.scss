@@ -1,0 +1,41 @@
+@mixin default($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: black;
+    height: 100vh;
+    flex-direction: $direction;
+    margin: 0%;
+}
+
+.page {
+    @include default();
+}
+
+// body {
+//     background-color: blue;
+// }
+
+.lTri {
+    @include default(row);
+    // background: darkgrey;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 200px 200px 0;
+    border-color: transparent #646e78 transparent transparent;
+}
+
+.rTri {
+    @include default(row);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 200px 200px 0 0;
+    border-color: darkgrey transparent transparent transparent;
+}
+
+.bottomCircle {
+    @include default;
+    
+}
